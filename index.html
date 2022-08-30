@@ -14,6 +14,7 @@
 </head>
 
 <body class="bg-stone-900">
+    <!-- header start  -->
     <header class="bg-black text-center text-white p-5 mb-5">
         <section class="p-5">
             <h1 class="font-bold text-3xl py-3">Choose Your <i class="text-violet-700">Favourite Players...</i></h1>
@@ -25,11 +26,17 @@
                 team, which competes in La Liga, the top flight of Spanish football.</p>
         </section>
     </header>
+
+    <!-- player selection and calculation part -->
+
     <main>
-        <section class="w-9/12 mx-auto mt-10 mb-40">
+
+        <section class="w-9/12 mx-auto mt-10 mb-32">
+
             <div class="grid grid-cols-4 gap-4">
 
-                <!-- 1st column  -->
+                <!-- player card selection part start-->
+
                 <div class="grid grid-rows-3 grid-flow-col gap-4">
                     <!-- player-1 -->
                     <div class="w-full h-72 card-compact bg-black">
@@ -38,7 +45,7 @@
                             <h3 class="card-title">Denis-Suarez</h3>
                             <small class="text-neutral-500">36 goals <span>.</span> 120 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
@@ -49,7 +56,7 @@
                             <h3 class="card-title">Kylian Mbappé</h3>
                             <small class="text-neutral-500">30 goals <span>.</span> 110 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
@@ -60,13 +67,12 @@
                             <h3 class="card-title">Vítor Machado</h3>
                             <small class="text-neutral-500">34 goals <span>.</span> 80 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2nd column  -->
                 <div class="grid grid-rows-3 grid-flow-col gap-4">
                     <!-- player-4 -->
                     <div class="w-full h-72 card-compact bg-black">
@@ -75,7 +81,7 @@
                             <h3 class="card-title">Lionel Messi</h3>
                             <small class="text-neutral-500">40 goals <span>.</span> 100 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
@@ -86,7 +92,7 @@
                             <h3 class="card-title">Neymar Jr</h3>
                             <small class="text-neutral-500">44 goals <span>.</span> 120 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
@@ -97,14 +103,14 @@
                             <h3 class="card-title">Sergio Ramos</h3>
                             <small class="text-neutral-500">47 goals <span>.</span> 130 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- 3rd column -->
+
                 <div class="grid grid-rows-3 grid-flow-col gap-4">
                     <!-- player-7 -->
                     <div class="w-full h-72  card-compact bg-black">
@@ -113,7 +119,7 @@
                             <h3 class="card-title"> Ivan Rakitić</h3>
                             <small class="text-neutral-500">32 goals <span>.</span> 90 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
@@ -124,7 +130,7 @@
                             <h3 class="card-title">Renato Sanches</h3>
                             <small class="text-neutral-500">20 goals <span>.</span> 112 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
@@ -135,24 +141,38 @@
                             <h3 class="card-title">Sergio Aguero</h3>
                             <small class="text-neutral-500">25 goals <span>.</span> 102 assists</small>
                             <div class="card-actions">
-                                <button class="w-32 h-7 btn-primary mt-3">SELECT</button>
+                                <button onclick="selectPlayers(this)" class="w-32 h-7 btn-primary mt-3">SELECT</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- selected players-->
 
-                <!-- 4th column -->
                 <div class="grid grid-rows-2 gap-4">
-                    <div class="w-full h-72 card-compact card-body text-center items-center bg-black text-white">
+                    <div class=" w-full h-72 bg-black text-white py-3">
+                        <h3 class="text-xl text-center text-blue-500">
+                            Selected- <span id="total-added-players" class="text-fuchsia-700">0</span>
+                        </h3>
 
-                        <h3 class="card-title">Selected-V</h3>
+                        <!-- table  -->
+                        <table class="w-full">
+
+                            <tbody id="listed-name" class="grid grid-rows-5 gap-4 p-4">
+
+                            </tbody>
+                        </table>
+
+
+
+                        <!-- calculation part -->
+
+                        <div></div>
                     </div>
                 </div>
-            </div>
         </section>
-        <hr>
-    </main>
 
+    </main>
+    <hr>
     <footer class="footer footer-center p-7 bg-stone-900 text-stone-400">
         <div>
             <p>Copyright©2022 - All Rights Reserved.</p>
