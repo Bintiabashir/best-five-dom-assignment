@@ -6,11 +6,10 @@ function display(selectedPlayersName) {
     tableBody.innerHTML = "";
     for (i = 0; i < selectedPlayersName.length; i++) {
         const name = nameArray[i];
-        // console.log(name)
         const tr = document.createElement("tr");
         tr.innerHTML = ` 
-        <th class="pr-3">${i + 1} </th>
-        <td>${name}</td>
+        <th class="pr-3 text-orange-500">${i + 1} </th>
+        <td class="text-zinc-300">${name}</td>
         `;
         tableBody.appendChild(tr);
     }

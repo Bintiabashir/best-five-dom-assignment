@@ -148,27 +148,70 @@
                 </div>
                 <!-- selected players-->
 
-                <div class="grid grid-rows-2 gap-4">
+                <div class="grid grid-rows-3 gap-4">
                     <div class=" w-full h-72 bg-black text-white py-3">
-                        <h3 class="text-xl text-center text-blue-500">
-                            Selected- <span id="total-added-players" class="text-fuchsia-700">0</span>
+                        <h3 class="text-xl font-semibold text-center text-blue-500 p-2">
+                            Selected- <span id="total-added-players" class="text-cyan-500">0</span>
                         </h3>
 
                         <!-- table  -->
                         <table class="w-full">
 
-                            <tbody id="listed-name" class="grid grid-rows-5 gap-4 p-4">
+                            <tbody id="listed-name" class="grid grid-rows-5 gap-4 p-3">
 
                             </tbody>
                         </table>
 
+                    </div>
+                    <!-- calculation part -->
 
-
-                        <!-- calculation part -->
-
-                        <div></div>
+                    <div class="row-span-2 w-full">
+                        <div class="bg-black p-3">
+                            <h3 class="text-xl font-semibold text-center text-blue-500 p-2 pb-4">
+                                Budget
+                            </h3>
+                            <div class="pb-4 text-stone-300">
+                                <div class=" flex items-center ">
+                                    <p class="text-gray-500 tracking-tighter text-sm">Per Player</p>
+                                    <input type="text" placeholder="amount"
+                                        class=" border-solid border-2 border-gray-400 ml-2 w-7/12 p-1 px-2 max-w-xs bg-black " />
+                                </div>
+                                <div class="card-actions">
+                                    <button class="w-full h-7 btn-primary mt-3">Calculate</button>
+                                </div>
+                                <div class=" flex items-center justify-between pt-4 pb-2">
+                                    <p class="text-gray-500 tracking-tighter text-sm">
+                                        Player Expenses
+                                    </p>
+                                    <p class=" tracking-tight text-sm text-red-400">$<span
+                                            id="expense-total">00000</span>
+                                    </p>
+                                </div>
+                                <div class=" flex items-center pb-2 ">
+                                    <p class="text-gray-500 tracking-tight text-sm">Manager</p>
+                                    <input type="text" placeholder="amount "
+                                        class=" border-solid border-2 border-gray-400 ml-3 w-7/12 p-1 px-2 max-w-xs bg-black " />
+                                </div>
+                                <div class=" flex items-center pb-2 ">
+                                    <p class="text-gray-500 tracking-tight text-sm">Coach</p>
+                                    <input type="text" placeholder="amount"
+                                        class=" border-solid border-2 border-gray-400 ml-7 w-7/12 p-1 px-2 max-w-xs bg-black " />
+                                </div>
+                                <div class="card-actions">
+                                    <button class="w-full h-7 btn-primary mt-3">Calculate Total</button>
+                                </div>
+                                <div class=" flex justify-between pt-4 pb-2">
+                                    <p class="text-gray-500 tracking-tight font-semibold">
+                                        Total
+                                    </p>
+                                    <p class="ml-2 tracking-tight text-sm text-rose-700">$<span id="total">00000</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
         </section>
 
     </main>
