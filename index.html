@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title  -->
     <title> Favourite Players </title>
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,12 +15,18 @@
 </head>
 
 <body class="bg-stone-900">
-    <!-- header start  -->
+    <!-- header part -->
+
     <header class="bg-black text-center text-white p-5 mb-5">
         <section class="p-5">
-            <h1 class="font-bold text-3xl py-3">Choose Your <i class="text-violet-700">Barça Favourite Players...</i>
+            <h1 class="font-bold text-3xl py-3 text-indigo-500">Choose Your <i class="text-yellow-400"><span
+                        class="text-red-600">Barça</span>
+                    Favourite
+                    Players...</i>
             </h1>
-            <p class=" px-5">football Club Barcelona, commonly referred to as Barcelona and colloquially
+            <p class=" px-5 tracking-tight py-4 text-slate-300">football Club Barcelona, commonly referred to as
+                Barcelona and
+                colloquially
                 known as
                 Barça, is a professional
                 multi-sports club based in Barcelona, Catalonia, Spain. It is best known for its professional men's
@@ -147,12 +154,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- selected players-->
 
                 <div class="grid grid-rows-3 gap-4">
+                    <!-- selected players-->
                     <div class=" w-full h-72 bg-black text-white py-3">
-                        <h3 class="text-xl font-semibold text-center text-blue-500 p-2">
-                            Selected- <span id="total-added-players" class="text-cyan-500">0</span>
+                        <h3 class="text-xl font-semibold text-center text-red-500 p-2">
+                            Selected <span id="total-added-players" class="text-amber-400"> 0</span>
                         </h3>
 
                         <!-- table  -->
@@ -168,47 +175,46 @@
 
                     <div class="row-span-2 w-full">
                         <div class="bg-black p-3">
-                            <h3 class="text-xl font-semibold text-center text-blue-500 p-2 pb-4">
+                            <h3 class="text-xl font-semibold text-center text-yellow-400 p-2 pb-4">
                                 Budget
                             </h3>
-                            <div class="pb-4 text-stone-300">
+                            <div class="pb-4 text-sky-300">
                                 <div class=" flex items-center ">
                                     <p class="text-gray-500 tracking-tighter text-sm">Per Player</p>
                                     <input type="text" placeholder="amount" id="per-player-budget"
-                                        class=" border-solid border-2 border-gray-400 ml-2 w-7/12 p-1 px-2 max-w-xs bg-black " />
+                                        class=" border-solid border-2 border-teal-600 ml-2 w-7/12 p-1 px-2 max-w-xs bg-black " />
                                 </div>
                                 <div class="card-actions">
-                                    <button class="w-full h-7 btn-primary mt-3"
+                                    <button class="w-full h-7 btn-primary mt-3 text-black"
                                         id="btn-player-expenses">Calculate</button>
                                 </div>
                                 <div class=" flex items-center justify-between pt-4 pb-2">
                                     <p class="text-gray-500 tracking-tighter text-sm">
                                         Player Expenses
                                     </p>
-                                    <p class=" tracking-tight text-sm text-red-400">$<span
-                                            id="total-player-expense">0</span>
+                                    <p class=" text-red-500">$<span id="total-player-expense">0</span>
                                     </p>
                                 </div>
                                 <div class=" flex items-center pb-2 ">
                                     <p class="text-gray-500 tracking-tight text-sm">Manager</p>
                                     <input type="text" placeholder="amount" id="manager-budget"
-                                        class=" border-solid border-2 border-gray-400 ml-3 w-7/12 p-1 px-2 max-w-xs bg-black " />
+                                        class=" border-solid border-2 border-teal-600 ml-3 w-7/12 p-1 px-2 max-w-xs bg-black " />
                                 </div>
                                 <div class=" flex items-center pb-2 ">
                                     <p class="text-gray-500 tracking-tight text-sm">Coach</p>
                                     <input type="text" placeholder="amount" id="coach-budget"
-                                        class=" border-solid border-2 border-gray-400 ml-7 w-7/12 p-1 px-2 max-w-xs bg-black " />
+                                        class=" border-solid border-2 border-teal-600 ml-7 w-7/12 p-1 px-2 max-w-xs bg-black " />
                                 </div>
                                 <div class="card-actions">
-                                    <button class="w-full h-7 btn-primary mt-3" id="btn-total-calculation">Calculate
+                                    <button class="w-full h-7 btn-primary mt-3 text-black"
+                                        id="btn-total-calculation">Calculate
                                         Total</button>
                                 </div>
                                 <div class=" flex justify-between pt-4 pb-2">
                                     <p class="text-gray-500 tracking-tight font-semibold">
                                         Total
                                     </p>
-                                    <p class="ml-2 tracking-tight text-sm text-rose-700">$<span
-                                            id="total-expenses">0</span>
+                                    <p class="ml-2  text-rose-700">$<span id="total-expenses">0</span>
                                     </p>
                                 </div>
                             </div>
@@ -217,14 +223,18 @@
                 </div>
             </div>
         </section>
-
     </main>
+
     <hr>
+
+    <!-- footer  -->
+
     <footer class="footer footer-center p-7 bg-stone-900 text-stone-400">
         <div>
             <p>Copyright©2022 - All Rights Reserved.</p>
         </div>
     </footer>
+
     <script src="js/utilities.js"></script>
     <script src="js/selected.js"></script>
     <script src="js/playerExpenses.js"></script>
