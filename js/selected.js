@@ -13,7 +13,7 @@ function display(selectedPlayersName) {
         `;
         tableBody.appendChild(tr);
     }
-
+    clearAllValues();
 }
 
 function selectPlayers(element) {
